@@ -20,8 +20,15 @@
 
     echo "<hr>";
     for($i = 1; $i <= 10; $i++) {
-        if($i != 5) {
-            echo "$i <br>";
+        echo ($i != 5) ? "$i<br>" : "";
+    }
+
+    echo "<hr>";
+    for($i = 10; $i > 0; $i--) {
+        if($i != 1) {
+            echo "~~~~ Anak ayam turun $i, mati 1 tinggal ". ($i - 1) . " ~~~~<br>";
+        } else {
+            echo "~~~~ Anak ayam turun 1, mati 1 tinggal induknya ~~~~";
         }
     }
     
