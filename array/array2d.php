@@ -41,6 +41,30 @@ function nilaiHuruf($nilai) {
             break;
     }
 }
+
+function backTr($huruf) {
+    switch ($huruf) {
+        case 'A':
+            return "green";
+            break;
+
+        case 'B':
+            return "lightgreen";
+            break;
+
+        case 'C':
+            return "orange";
+            break;
+
+        case 'D':
+            return "red";
+            break;
+        
+        default:
+            return "";
+            break;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +77,24 @@ function nilaiHuruf($nilai) {
     <style>
         #siswa {
             margin: auto;
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+        }
+
+        .lightgreen {
+            background-color: lightgreen;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
         }
     </style>
 </head>
@@ -71,7 +113,7 @@ function nilaiHuruf($nilai) {
             <?php
             $no = 1;
             foreach ($siswa as $data) { ?>
-                <tr>
+                <tr class="<?= backTr(nilaiHuruf($data['score'])) ?>">
                     <td align="center"><?= $no++ ?></td>
                     <td><?= $data['name'] ?></td>
                     <td align="center"><?= $data['score'] ?> (<?= nilaiHuruf($data['score']) ?>)</td>
