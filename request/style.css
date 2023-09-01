@@ -51,7 +51,7 @@
     font-size: 1rem;
 }
 
-.formGroup .formButton a {
+.formGroup .formButton a, .formGroup .formButton button[type='reset'] {
     margin-top: 5px;
     background-color: rgb(233, 93, 93);
     width: 100%;
@@ -77,6 +77,14 @@ table tr td {
 .warning {
     margin: 5px 0;
     background-color: red;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.success {
+    margin: 5px 0;
+    background-color: rgb(93, 93, 233);
     width: 100%;
     padding: 10px;
     color: white;
